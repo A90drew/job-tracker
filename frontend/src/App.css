@@ -1,0 +1,259 @@
+:root {
+  --background: #16171d;
+  --surface: #22242c;
+  --surface-hover: #2b2e38;
+  --border: #3a3e4a;
+  --text: #f5f7fa;
+  --muted: #aeb4c0;
+  --blue: #3b82f6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--background);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+h1 {
+  margin-bottom: 28px;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.dashboard {
+  margin-bottom: 28px;
+}
+
+.dashboard h2 {
+  margin-bottom: 16px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.dashboard-cards {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.summary-card {
+  flex: 1;
+  min-width: 150px;
+  padding: 16px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background-color: var(--surface);
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.summary-card:hover {
+  background-color: var(--surface-hover);
+  transform: translateY(-3px);
+}
+
+.summary-card h3 {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.summary-card p {
+  margin: 0;
+  color: var(--text);
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+.sort-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.job-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.job-form input,
+.job-form button,
+.job-card select,
+.job-card button,
+.sort-control select {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px 10px;
+  font: inherit;
+}
+
+.job-form input {
+  flex: 1;
+  min-width: 180px;
+  background-color: var(--surface);
+  color: var(--text);
+}
+
+.job-form button {
+  background-color: var(--blue);
+  color: white;
+  cursor: pointer;
+}
+
+.job-form button:hover {
+  background-color: #2563eb;
+}
+
+.job-card {
+  margin: 14px 0;
+  padding: 16px 20px;
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--border);
+  border-radius: 8px;
+  background-color: var(--surface);
+  text-align: left;
+}
+
+.job-card:hover {
+  background-color: var(--surface-hover);
+  transform: translateY(-3px);
+}
+
+.job-card h2 {
+  margin: 0 0 10px;
+  font-size: 1.25rem;
+}
+
+.job-card p {
+  margin: 6px 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.job-card select,
+.job-card button,
+.sort-control select {
+  background-color: var(--surface-hover);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.job-card button:hover {
+  background-color: #3a3e4a;
+}
+
+.status-submitted {
+  border-left-color: #3b82f6;
+}
+
+.status-interview {
+  border-left-color: #f59e0b;
+}
+
+.status-rejected {
+  border-left-color: #ef4444;
+}
+
+.status-accepted {
+  border-left-color: #22c55e;
+}
+
+.status-not-submitted {
+  border-left-color: #6b7280;
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 24px 16px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .dashboard-cards {
+    flex-direction: column;
+  }
+
+  .job-form {
+    flex-direction: column;
+  }
+
+  .job-form input,
+  .job-form button {
+    width: 100%;
+  }
+
+  .sort-control {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .sort-control select {
+    width: 100%;
+  }
+}
+.job-details {
+  margin: 14px 0;
+  padding: 16px 20px;
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--blue);
+  border-radius: 8px;
+  background-color: var(--surface);
+  text-align: left;
+}
+
+.job-details h2 {
+  margin: 0 0 10px;
+  font-size: 1.25rem;
+}
+
+.job-details p {
+  margin: 6px 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.job-details a {
+  display: inline-block;
+  margin: 12px 0 18px;
+  color: var(--blue);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.job-details a:hover {
+  text-decoration: underline;
+}
+
+.job-details button {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px 10px;
+  background-color: var(--surface-hover);
+  color: var(--text);
+  font: inherit;
+  cursor: pointer;
+}
+
+.job-details button:hover {
+  background-color: var(--border);
+}
